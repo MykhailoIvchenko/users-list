@@ -3,7 +3,11 @@ import { useSearchParams } from 'react-router-dom';
 import { apiService } from '../services/apiService';
 import { dtoService } from '../services/dtoService';
 import { ApiEndpoints, ApiMethods, SearchParamsKeys } from '../utils/enums';
-import { IUser, IUserFromApi } from '../utils/types';
+import {
+  AsyncVoidFunctionWithoutArgs,
+  IUser,
+  IUserFromApi,
+} from '../utils/types';
 import { useFetchData } from './useFetchData';
 
 export const useUsersList = () => {
@@ -50,7 +54,7 @@ export const useUsersList = () => {
   };
 
   useEffect(() => {
-    fetchDataFromApi<() => Promise<void>>(
+    fetchDataFromApi<AsyncVoidFunctionWithoutArgs>(
       getUsersListAndSet,
       'An error occured during users list obtaining'
     );

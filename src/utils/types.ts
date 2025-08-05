@@ -80,3 +80,5 @@ export interface IUserFromApi extends IUser {
   crypto: ICrypto;
   role: string;
 }
+
+export type AsyncVoidFunctionWithoutArgs = () => Promise<void>;
