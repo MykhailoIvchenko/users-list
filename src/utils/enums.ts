@@ -1,0 +1,12 @@
+export enum ApiMethods {
+  GET = 'GET',
+  DELETE = 'DELETE',
+  OPTIONS = 'OPTIONS',
+  PATCH = 'PATCH',
+  POST = 'POST',
+  PUT = 'PUT',
+}
+
+export enum ApiEndpoints {
+  USERS = 'users',
+}
