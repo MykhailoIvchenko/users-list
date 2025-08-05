@@ -7,6 +7,7 @@ export interface IUserMainData {
   id: number;
   firstName: string;
   lastName: string;
+  image: string;
 }
 
 export interface IUser extends IUserMainData {
@@ -62,7 +63,6 @@ export interface IUserFromApi extends IUser {
   maidenName: string;
   password: string;
   birthDate: string;
-  image: string;
   bloodGroup: string;
   height: number;
   weight: number;

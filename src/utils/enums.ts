@@ -10,3 +10,7 @@ export enum ApiMethods {
 export enum ApiEndpoints {
   USERS = 'users',
 }
+
+export enum SearchParamsKeys {
+  SEARCH = 'q',
+}

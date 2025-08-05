@@ -46,4 +46,4 @@ export const apiRequest = async <T = unknown>(
   return response.json() as Promise<T>;
 };
 
-export const helpersService = { getApiEndpointUrl, apiRequest };
+export const apiService = { getApiEndpointUrl, apiRequest };
