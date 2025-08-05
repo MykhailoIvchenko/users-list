@@ -33,4 +33,17 @@ function getApiEndpointUrl(
   return url.pathname + url.search;
 }
 
-export const helpersService = { getApiEndpointUrl };
+export const apiRequest = async <T = unknown>(
+  url: string = '',
+  options?: RequestInit
+): Promise<T> => {
+  const response = await fetch(url, options);
+
+  if (!response.ok) {
+    throw new Error(`${response.status} - ${response.statusText}`);
+  }
+
+  return response.json() as Promise<T>;
+};
+
+export const helpersService = { getApiEndpointUrl, apiRequest };
