@@ -21,3 +21,5 @@ export const theme = {
     body: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
   },
 };
+
+export type ThemeType = typeof theme;
