@@ -7,6 +7,7 @@ export const theme = {
     text: '#212529',
     error: '#DC3545',
   },
+
   fontSizes: {
     xs: '0.75rem',
     sm: '0.875rem',
@@ -15,10 +16,22 @@ export const theme = {
     lg: '1.5rem',
     xl: '2rem',
   },
+
   spacing: (factor: number) => `${0.25 * factor}rem`,
+
   borderRadius: '8px',
+
   fonts: {
     body: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+  },
+
+  breakpoints: {
+    mobile: '360px',
+    tablet: '768px',
+    laptop: '1024px',
+    desktop: '1280px',
+    widescreen: '1440px',
+    fullHD: '1600px',
   },
 };
 
