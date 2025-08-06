@@ -25,6 +25,10 @@ export const theme = {
     body: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
   },
 
+  sizes: {
+    headerHeight: '60px',
+  },
+
   breakpoints: {
     mobile: '360px',
     tablet: '768px',

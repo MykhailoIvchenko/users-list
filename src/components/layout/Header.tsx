@@ -5,12 +5,12 @@ import { media } from '../../styles/media';
 import { AppRoutes } from '../../utils/enums';
 import { BurgerButton } from '../BurgetButton';
 import { Navbar } from '../Navbar';
-import { NavRoute } from '../../utils/types';
+import { INavRoute } from '../../utils/types';
 
 interface HeaderProps {
   isMobileMenuOpen: boolean;
   onToggleMobileMenu: () => void;
-  routes: NavRoute[];
+  routes: INavRoute[];
 }
 
 const HeaderWrapper = styled.header`
