@@ -1,9 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
-  /*
-    Based on https://github.com/hankchizljaw/modern-css-reset
-  */
   *, *::before, *::after {
     box-sizing: border-box;
   }
@@ -16,6 +13,10 @@ export const GlobalStyle = createGlobalStyle`
     color: ${({ theme }) => theme.colors.text};
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
   }
 
   img, picture, video, canvas, svg {
@@ -50,5 +51,15 @@ export const GlobalStyle = createGlobalStyle`
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  * {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
   }
 `;

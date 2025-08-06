@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  margin-top: 60px;
   text-align: center;
   gap: 1rem;
 `;

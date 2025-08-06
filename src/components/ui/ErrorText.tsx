@@ -10,7 +10,7 @@ interface ErrorTextProps {
 const StyledErrorText = styled.div`
   color: ${({ theme }) => theme.colors.error};
   font-family: ${({ theme }) => theme.fonts.body};
-  font-size: ${({ theme }) => theme.fontSizes.base};
+  font-size: ${({ theme }) => theme.fontSizes.lg};
   background-color: ${({ theme }) => theme.colors.surface};
   padding: ${({ theme }) => theme.spacing(2)};
   border-radius: ${({ theme }) => theme.borderRadius};
@@ -18,12 +18,12 @@ const StyledErrorText = styled.div`
   text-align: center;
 
   ${media.mobile`
-    font-size: ${({ theme }) => theme.fontSizes.sm};
+    font-size: ${({ theme }) => theme.fontSizes.md};
     padding: ${({ theme }) => theme.spacing(1.5)};
   `}
 
   ${media.fullHD`
-    font-size: ${({ theme }) => theme.fontSizes.md};
+    font-size: ${({ theme }) => theme.fontSizes.xl};
     padding: ${({ theme }) => theme.spacing(3)};
   `}
 `;

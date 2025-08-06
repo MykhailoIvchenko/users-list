@@ -38,13 +38,11 @@ export const DefaultLayout = memo(() => {
         routes={routes}
       />
 
-      {isMobileMenuOpen && (
-        <NavbarMobile
-          routes={routes}
-          onClose={toggleMobileMenu}
-          isOpen={isMobileMenuOpen}
-        />
-      )}
+      <NavbarMobile
+        routes={routes}
+        onClose={toggleMobileMenu}
+        isOpen={isMobileMenuOpen}
+      />
 
       <Content>
         <Outlet />

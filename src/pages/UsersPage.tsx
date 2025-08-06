@@ -1,31 +1,60 @@
+import styled from 'styled-components';
 import { CardsList } from '../components/layout/CardsList';
 import { PageTitle } from '../components/ui/PageTitle';
 import { Spinner } from '../components/ui/Spinner';
 import { UserCard } from '../components/UserCard';
 import { useUsersList } from '../hooks/useUsersList';
 import { Notification } from '../components/ui/Notification';
+import { CenteredWrapper } from '../components/layout/СenteredWrapper';
+import { SearchInput } from '../components/SearchInput';
+import { ErrorText } from '../components/ui/ErrorText';
+import { media } from '../styles/media';
+
+const HeaderRow = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: ${({ theme }) => theme.spacing(4)};
+  margin-bottom: ${({ theme }) => theme.spacing(3)};
+  position: sticky;
+  top: ${({ theme }) => theme.sizes.headerHeight};
+  background-color: ${({ theme }) => theme.colors.background};
+  border-radius: ${({ theme }) => theme.borderRadius};
+
+  ${media.laptop`
+    flex-direction: row;
+  `}
+`;
 
 const UsersPage = () => {
   const { users, isLoading, error, setError } = useUsersList();
 
   return (
     <>
-      <PageTitle>Users List</PageTitle>
+      <HeaderRow>
+        <PageTitle>Users List</PageTitle>
+        <SearchInput />
+      </HeaderRow>
 
       {isLoading ? (
-        <Spinner />
-      ) : (
+        <CenteredWrapper>
+          <Spinner />
+        </CenteredWrapper>
+      ) : users.length > 0 ? (
         <CardsList>
           {users.map((user) => (
             <UserCard key={user.id} user={user} />
           ))}
         </CardsList>
+      ) : (
+        <ErrorText>There are no users</ErrorText>
       )}
 
       {error && (
         <Notification
           type={'error'}
-          message={'Something went wrong on users list fetching'}
+          message={error}
           onClose={() => setError('')}
         />
       )}

@@ -22,16 +22,18 @@ const MobileWrapper = styled.nav<{ $visible: boolean }>`
   padding: ${({ theme }) => theme.spacing(4)};
   display: flex;
   flex-direction: column;
-  gap: ${({ theme }) => theme.spacing(3)};
-  transform: translateY(-100%);
+  justify-content: center;
+  align-items: center;
+  gap: ${({ theme }) => theme.spacing(4)};
+  transform: translateX(100%);
   opacity: 0;
   pointer-events: none;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transition: 0.6s linear;
 
   ${({ $visible }) =>
     $visible &&
     css`
-      transform: translateY(0);
+      transform: translateX(0);
       opacity: 1;
       pointer-events: auto;
     `}
@@ -45,13 +47,20 @@ export const NavbarMobile = memo(
   ({ isOpen, routes, onClose, className }: NavbarMobileProps) => {
     const [shouldRender, setShouldRender] = useState(isOpen);
 
+    // Scroll lock
     useEffect(() => {
       if (isOpen) {
+        document.body.style.overflow = 'hidden';
         setShouldRender(true);
       } else {
-        const timeout = setTimeout(() => setShouldRender(false), 300);
+        document.body.style.overflow = '';
+        const timeout = setTimeout(() => setShouldRender(false), 400);
         return () => clearTimeout(timeout);
       }
+
+      return () => {
+        document.body.style.overflow = '';
+      };
     }, [isOpen]);
 
     if (!shouldRender) return null;

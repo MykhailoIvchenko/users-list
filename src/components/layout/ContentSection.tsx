@@ -21,7 +21,7 @@ const SectionWrapper = styled.section<{ imagePosition: 'left' | 'right' }>`
   gap: ${({ theme }) => theme.spacing(4)};
   padding: ${({ theme }) => theme.spacing(6)} 0;
 
-  ${media.tablet`
+  ${media.laptop`
     flex-direction: ${({ imagePosition }) =>
       imagePosition === 'left' ? 'row' : 'row-reverse'};
     align-items: flex-start;
