@@ -1,4 +1,3 @@
-import { SearchInput } from './components/SearchInput';
 import { Button } from './components/ui/Button';
 import { ErrorText } from './components/ui/ErrorText';
 import { InfoRow } from './components/ui/InfoRow';
