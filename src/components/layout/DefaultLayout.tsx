@@ -1,4 +1,4 @@
-import { ReactNode, memo, useCallback, useState } from 'react';
+import { memo, useCallback, useState } from 'react';
 import styled from 'styled-components';
 import { Header } from './Header';
 import { Footer } from './Footer';
@@ -6,10 +6,7 @@ import { MainContent } from './MainContent';
 import { INavRoute } from '../../utils/types';
 import { AppRoutes } from '../../utils/enums';
 import { NavbarMobile } from '../NavbarMobile';
-
-interface DefaultLayoutProps {
-  children: ReactNode;
-}
+import { Outlet } from 'react-router-dom';
 
 const Wrapper = styled.div`
   display: flex;
@@ -26,7 +23,7 @@ const routes: INavRoute[] = [
   { label: 'Users', to: AppRoutes.USERS },
 ];
 
-export const DefaultLayout = memo(({ children }: DefaultLayoutProps) => {
+export const DefaultLayout = memo(() => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
 
   const toggleMobileMenu = useCallback(() => {
@@ -49,7 +46,9 @@ export const DefaultLayout = memo(({ children }: DefaultLayoutProps) => {
         />
       )}
 
-      <Content>{children}</Content>
+      <Content>
+        <Outlet />
+      </Content>
       <Footer />
     </Wrapper>
   );
