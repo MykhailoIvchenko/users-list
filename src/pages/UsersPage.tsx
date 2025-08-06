@@ -25,7 +25,7 @@ const UsersPage = () => {
       {error && (
         <Notification
           type={'error'}
-          message={'Something went wrong on users list loading'}
+          message={'Something went wrong on users list fetching'}
           onClose={() => setError('')}
         />
       )}
