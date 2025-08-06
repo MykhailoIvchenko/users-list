@@ -695,7 +695,7 @@ Error generating stack: `+a.message+`
   ${be.laptop`
     flex-direction: row;
   `}
-`,A3=()=>{const l=yu(),{user:u,error:o,isLoading:c,setError:f}=T3(),h=z.useCallback(()=>{l(sa.USERS)},[]);return H.jsxs(H.Fragment,{children:[H.jsxs(R3,{children:[H.jsx(cc,{children:"User Data"}),H.jsx(Mv,{onClick:h,children:"Back to Users"})]}),H.jsx(Nv,{children:c?H.jsx(zv,{}):u&&H.jsx(x3,{user:u})}),o&&H.jsx(wv,{type:"error",message:o,onClose:()=>f("")})]})},D3=Rb(Vf(H.jsxs(tn,{element:H.jsx(bS,{}),children:[H.jsx(tn,{path:sa.HOME,element:H.jsx(SS,{})}),H.jsx(tn,{path:sa.ABOUT,element:H.jsx(HS,{})}),H.jsx(tn,{path:sa.USERS,element:H.jsx(y3,{})}),H.jsx(tn,{path:`${sa.USERS}/:id`,element:H.jsx(A3,{})}),H.jsx(tn,{path:"*",element:H.jsx(Fb,{})})]})),{basename:"/users-list/"});function z3(){return H.jsx(Cb,{router:D3})}const M3=Fy`
+`,A3=()=>{const l=yu(),{user:u,error:o,isLoading:c,setError:f}=T3(),h=z.useCallback(()=>{l(sa.USERS)},[]);return H.jsxs(H.Fragment,{children:[H.jsxs(R3,{children:[H.jsx(cc,{children:"User Data"}),H.jsx(Mv,{onClick:h,children:"Back to Users"})]}),H.jsx(Nv,{children:c?H.jsx(zv,{}):u&&H.jsx(x3,{user:u})}),o&&H.jsx(wv,{type:"error",message:o,onClose:()=>f("")})]})},D3=Rb(Vf(H.jsxs(tn,{element:H.jsx(bS,{}),children:[H.jsx(tn,{path:sa.HOME,element:H.jsx(SS,{})}),H.jsx(tn,{path:sa.ABOUT,element:H.jsx(HS,{})}),H.jsx(tn,{path:sa.USERS,element:H.jsx(y3,{})}),H.jsx(tn,{path:`${sa.USERS}/:id`,element:H.jsx(A3,{})}),H.jsx(tn,{path:"*",element:H.jsx(Fb,{})})]})),{basename:"/users-list"});function z3(){return H.jsx(Cb,{router:D3})}const M3=Fy`
   *, *::before, *::after {
     box-sizing: border-box;
   }
