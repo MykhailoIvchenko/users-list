@@ -2,7 +2,7 @@ import { memo, useCallback } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { SearchParamsKeys } from '../utils/enums';
 import { Input } from './ui/Input';
-import Search from '@/assets/icons/search.svg?react';
+import Search from '../assets/icons/search.svg?react';
 
 export const SearchInput = memo(() => {
   const [searchParams, setSearchParams] = useSearchParams();
