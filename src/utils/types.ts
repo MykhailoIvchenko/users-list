@@ -81,4 +81,9 @@ export interface IUserFromApi extends IUser {
   role: string;
 }
 
+export interface NavRoute {
+  label: string;
+  to: string;
+}
+
 export type AsyncVoidFunctionWithoutArgs = () => Promise<void>;

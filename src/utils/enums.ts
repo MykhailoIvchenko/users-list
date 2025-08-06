@@ -14,3 +14,9 @@ export enum ApiEndpoints {
 export enum SearchParamsKeys {
   SEARCH = 'q',
 }
+
+export enum AppRoutes {
+  HOME = '/',
+  ABOUT = '/about',
+  USERS = '/users',
+}

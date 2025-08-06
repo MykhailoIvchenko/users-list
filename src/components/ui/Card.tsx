@@ -7,10 +7,10 @@ import avatarPlaceholder from '../../assets/img/avatar-placeholder.webp';
 interface CardProps {
   imageUrl?: string;
   imageAlt?: string;
-  name: string;
   additionalInfo?: string;
   onDetailsClick: () => void;
   className?: string;
+  children: React.ReactNode | React.ReactNode[];
 }
 
 const CardContainer = styled.article`
@@ -34,18 +34,6 @@ const Content = styled.div`
   flex: 1;
 `;
 
-const Name = styled.h2`
-  font-size: ${({ theme }) => theme.fontSizes.lg};
-  color: ${({ theme }) => theme.colors.text};
-  margin: 0;
-`;
-
-const Info = styled.p`
-  font-size: ${({ theme }) => theme.fontSizes.base};
-  color: ${({ theme }) => theme.colors.secondary};
-  margin: ${({ theme }) => theme.spacing(1)} 0;
-`;
-
 const StyledImage = styled(Image)`
   width: 100px;
   height: 100px;
@@ -62,18 +50,16 @@ export const Card = memo(
   ({
     imageUrl = avatarPlaceholder,
     imageAlt,
-    name,
-    additionalInfo,
+    children,
     onDetailsClick,
     className,
   }: CardProps) => {
     return (
       <CardContainer className={className}>
-        <StyledImage src={imageUrl} alt={imageAlt ?? name} />
+        <StyledImage src={imageUrl} alt={imageAlt || 'Card image'} />
         <Content>
-          <Name>{name}</Name>
-          {additionalInfo && <Info>{additionalInfo}</Info>}
-          <Button onClick={onDetailsClick} aria-label={`Details for ${name}`}>
+          {children}
+          <Button onClick={onDetailsClick} aria-label={`Details for card data`}>
             Details
           </Button>
         </Content>
