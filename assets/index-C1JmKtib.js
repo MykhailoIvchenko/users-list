@@ -327,7 +327,7 @@ Error generating stack: `+a.message+`
   min-height: 100vh;
 `,yS=Se(mS)`
   flex: 1;
-`,U0=[{label:"About",to:It.ABOUT},{label:"Users",to:It.USERS}],bS=z.memo(()=>{const[l,u]=z.useState(!1),o=z.useCallback(()=>{u(c=>!c)},[]);return H.jsxs(gS,{children:[H.jsx(uS,{isMobileMenuOpen:l,onToggleMobileMenu:o,routes:U0}),H.jsx(pS,{routes:U0,onClose:o,isOpen:l}),H.jsx(yS,{children:H.jsx(vb,{})}),H.jsx(hS,{})]})});function SS(){return H.jsx(mb,{to:It.ABOUT,replace:!0})}const ES="/assets/hotel1-Wh6qxsNP.webp",xS="/assets/hotel2-BHntt5F7.webp",TS="/assets/hotel3-D8T_Kend.webp",RS="/assets/hotel4-lulNR8pT.webp",AS="/assets/hotel5-CwdgRSGR.webp",DS="/assets/hotel6-D1EITdN1.webp",zS=Se.img`
+`,U0=[{label:"About",to:It.ABOUT},{label:"Users",to:It.USERS}],bS=z.memo(()=>{const[l,u]=z.useState(!1),o=z.useCallback(()=>{u(c=>!c)},[]);return H.jsxs(gS,{children:[H.jsx(uS,{isMobileMenuOpen:l,onToggleMobileMenu:o,routes:U0}),H.jsx(pS,{routes:U0,onClose:o,isOpen:l}),H.jsx(yS,{children:H.jsx(vb,{})}),H.jsx(hS,{})]})});function SS(){return H.jsx(mb,{to:It.ABOUT,replace:!0})}const ES="/users-list/assets/hotel1-Wh6qxsNP.webp",xS="/users-list/assets/hotel2-BHntt5F7.webp",TS="/users-list/assets/hotel3-D8T_Kend.webp",RS="/users-list/assets/hotel4-lulNR8pT.webp",AS="/users-list/assets/hotel5-CwdgRSGR.webp",DS="/users-list/assets/hotel6-D1EITdN1.webp",zS=Se.img`
   display: block;
   width: ${({width:l})=>typeof l=="number"?`${l}px`:l??"100%"};
   height: ${({height:l})=>typeof l=="number"?`${l}px`:l??"auto"};
