@@ -5,7 +5,7 @@ import {
   createRoutesFromElements,
   Route,
 } from 'react-router-dom';
-import HomeRedirect from '../components/HomeRedirect';
+// import HomeRedirect from '../components/HomeRedirect';
 import { AppRoutes } from '../utils/enums';
 import AboutPage from '../pages/AboutPage';
 import UsersPage from '../pages/UsersPage';
@@ -14,7 +14,7 @@ import UserDetailsPage from '../pages/UserDetailsPage';
 export const router = createBrowserRouter(
   createRoutesFromElements(
     <Route element={<DefaultLayout />}>
-      <Route path={AppRoutes.HOME} element={<HomeRedirect />} />
+      <Route path={AppRoutes.HOME} element={<AboutPage />} />
       <Route path={AppRoutes.ABOUT} element={<AboutPage />} />
       <Route path={AppRoutes.USERS} element={<UsersPage />} />
       <Route path={`${AppRoutes.USERS}/:id`} element={<UserDetailsPage />} />
@@ -23,6 +23,7 @@ export const router = createBrowserRouter(
     </Route>
   ),
   {
-    basename: AppRoutes.HOME,
+    // basename: AppRoutes.HOME,
+    basename: '/users-list',
   }
 );

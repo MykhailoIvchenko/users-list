@@ -8,6 +8,7 @@
     "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "postbuild": "cp dist/index.html dist/404.html",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -34,5 +35,5 @@
     "vite": "^7.0.4",
     "vite-plugin-svgr": "^4.3.0"
   },
-  "homepage": "https://MykhailoIvchenko.github.io/users-list"
+  "homepage": "https://mykhailoivchenko.github.io/users-list"
 }
