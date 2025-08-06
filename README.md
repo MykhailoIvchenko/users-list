@@ -10,9 +10,8 @@ This project is a React application built with Vite, TypeScript, and styled-comp
 
 ### Prerequisites
 
-- Node.js (recommended version 18+)
+- Node.js (recommended version 20+)
 - npm (or yarn if preferred)
-- Access to GitHub for deploying to GitHub Pages
 
 ---
 
@@ -103,3 +102,45 @@ This command builds the project (`predeploy`), then publishes the contents of th
 - `lint`: runs ESLint for code quality checks.
 
 ---
+
+## Project Structure
+
+```
+.
+├── public/              # Static files like
+│   └── vite.svg
+├── src/                 # Source code folder
+│   ├── assets/          # Images and icons
+│   │   ├── icons/
+│   │   └── img/
+│   ├── components/      # Reusable React components
+│   │   ├── layout/      # Layout components (Header, Footer, etc.)
+│   │   └── ui/          # UI atomic components (Buttons, Cards, Inputs, etc.)
+│   ├── hooks/           # Custom React hooks
+│   ├── pages/           # Application pages for routing
+│   ├── routes/          # Route definitions
+│   ├── services/        # API and data services
+│   ├── styles/          # Global styles, themes, and typings
+│   └── utils/           # Utility functions, constants, and types
+├── App.tsx              # Root React component
+├── main.tsx             # Entry point
+├── vite-env.d.ts        # Vite environment typings
+├── package.json         # Project metadata and scripts
+├── tsconfig.json        # TypeScript configuration
+└── vite.config.ts       # Vite build configuration
+```
+
+### Folders descriptions
+
+- `public/` — contains static assets that are copied as-is to the build output.
+- `src/assets/` — images and SVG icons used in the UI.
+- `src/components/` — reusable React components split into:
+  - `layout/` — structural components like Header, Footer, CardsList.
+  - `ui/` — basic UI building blocks like buttons, inputs, and notifications.
+  - other components used to build pages.
+- `src/hooks/` — custom hooks encapsulating logic for data fetching, user state, etc.
+- `src/pages/` — top-level React components representing routes/pages.
+- `src/routes/` — route configuration and definitions.
+- `src/services/` — API calls and data transfer object (DTO) helpers.
+- `src/styles/` — theming, global styles, media queries, and styled-components typings.
+- `src/utils/` — app-wide constants, enums, and TypeScript types.
