@@ -1,4 +1,4 @@
-import { css, DefaultTheme, Interpolation } from 'styled-components';
+import { css, Interpolation } from 'styled-components';
 import { theme } from './theme';
 
 type BreakpointKeys = keyof typeof theme.breakpoints;
@@ -6,16 +6,17 @@ type BreakpointKeys = keyof typeof theme.breakpoints;
 type Media = {
   [K in BreakpointKeys]: (
     first: TemplateStringsArray,
-    ...interpolations: Interpolation<DefaultTheme>[]
-  ) => ReturnType<typeof css<DefaultTheme>>;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    ...interpolations: Interpolation<any>[]
+  ) => ReturnType<typeof css>;
 };
 
 export const media = (
   Object.keys(theme.breakpoints) as BreakpointKeys[]
 ).reduce((acc, key) => {
-  acc[key] = (first, ...interpolations) => css<DefaultTheme>`
+  acc[key] = (first, ...interpolations) => css`
     @media (min-width: ${theme.breakpoints[key]}) {
-      ${css<DefaultTheme>(first, ...interpolations)}
+      ${css(first, ...interpolations)}
     }
   `;
   return acc;
