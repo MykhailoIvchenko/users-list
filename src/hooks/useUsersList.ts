@@ -11,7 +11,7 @@ import {
 import { useFetchData } from './useFetchData';
 
 export const useUsersList = () => {
-  const { isLoading, error, fetchDataFromApi } = useFetchData();
+  const { isLoading, error, fetchDataFromApi, setError } = useFetchData();
 
   const [users, setUsers] = useState<IUser[]>([]);
   const [usersToDisplay, setUsersToDisplay] = useState<IUser[]>([]);
@@ -68,5 +68,6 @@ export const useUsersList = () => {
     users: usersToDisplay,
     isLoading,
     error,
+    setError,
   };
 };

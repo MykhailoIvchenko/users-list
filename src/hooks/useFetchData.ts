@@ -24,6 +24,7 @@ export const useFetchData = () => {
   return {
     isLoading,
     error,
+    setError,
     fetchDataFromApi,
   };
 };

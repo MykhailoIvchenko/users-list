@@ -11,7 +11,7 @@ import { ApiEndpoints, ApiMethods } from '../utils/enums';
 import { dtoService } from '../services/dtoService';
 
 export const useUserData = () => {
-  const { isLoading, error, fetchDataFromApi } = useFetchData();
+  const { isLoading, error, fetchDataFromApi, setError } = useFetchData();
 
   const { id } = useParams();
 
@@ -49,5 +49,6 @@ export const useUserData = () => {
     isLoading,
     error,
     user,
+    setError,
   };
 };
