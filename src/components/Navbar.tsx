@@ -2,10 +2,10 @@ import { memo } from 'react';
 import styled from 'styled-components';
 import { media } from '../styles/media';
 import { AppLink } from './ui/AppLink';
-import { NavRoute } from '../utils/types';
+import { INavRoute } from '../utils/types';
 
 interface NavbarProps {
-  routes: NavRoute[];
+  routes: INavRoute[];
   className?: string;
 }
 

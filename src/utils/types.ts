@@ -81,7 +81,7 @@ export interface IUserFromApi extends IUser {
   role: string;
 }
 
-export interface NavRoute {
+export interface INavRoute {
   label: string;
   to: string;
 }
