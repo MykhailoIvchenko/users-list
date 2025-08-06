@@ -30,7 +30,7 @@ export const SearchInput = memo(() => {
       type='search'
       value={searchValue}
       onChange={handleChange}
-      leftIcon={<Search size={18} />}
+      leftIcon={<Search />}
       placeholder='Search...'
       aria-label='Search'
     />
