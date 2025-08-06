@@ -7,27 +7,27 @@ interface MainContentProps {
 }
 
 export const MainContent = styled.main<MainContentProps>`
-  margin-left: ${({ theme }) => theme.spacing(2)};
-  margin-right: ${({ theme }) => theme.spacing(2)};
+  margin-left: ${({ theme }) => theme.offset(1)};
+  margin-right: ${({ theme }) => theme.offset(1)};
 
   ${media.tablet`
-    margin-left: ${({ theme }) => theme.spacing(3)};
-    margin-right: ${({ theme }) => theme.spacing(3)};
+    margin-left: ${({ theme }) => theme.offset(2)};
+    margin-right: ${({ theme }) => theme.offset(2)};
   `}
 
   ${media.laptop`
-    margin-left: ${({ theme }) => theme.spacing(4)};
-    margin-right: ${({ theme }) => theme.spacing(4)};
+    margin-left: ${({ theme }) => theme.offset(3)};
+    margin-right: ${({ theme }) => theme.offset(3)};
   `}
 
   ${media.desktop`
-    margin-left: ${({ theme }) => theme.spacing(5)};
-    margin-right: ${({ theme }) => theme.spacing(5)};
+    margin-left: ${({ theme }) => theme.offset(4)};
+    margin-right: ${({ theme }) => theme.offset(4)};
   `}
 
   ${media.widescreen`
-    margin-left: ${({ theme }) => theme.spacing(6)};
-    margin-right: ${({ theme }) => theme.spacing(6)};
+    margin-left: ${({ theme }) => theme.offset(6)};
+    margin-right: ${({ theme }) => theme.offset(6)};
   `}
 
   ${media.fullHD`

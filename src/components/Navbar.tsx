@@ -25,7 +25,6 @@ const Wrapper = styled.nav`
 `;
 
 export const Navbar = memo(({ routes, className }: NavbarProps) => {
-  console.log('Routes are', routes);
   return (
     <Wrapper
       className={className}

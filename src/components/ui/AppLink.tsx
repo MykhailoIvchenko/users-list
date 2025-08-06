@@ -28,7 +28,7 @@ const inactiveStyle = css`
 
 const StyledNavLink = styled(NavLink)`
   font-family: ${({ theme }) => theme.fonts.body};
-  font-size: ${({ theme }) => theme.fontSizes.sm};
+  font-size: ${({ theme }) => theme.fontSizes.lg};
   transition: color 0.2s ease;
   outline-offset: 2px;
 
@@ -40,29 +40,12 @@ const StyledNavLink = styled(NavLink)`
     ${inactiveStyle}
   }
 
-  ${media.tablet`
-    font-size: ${({ theme }) => theme.fontSizes.base};
-  `}
-
-  ${media.laptop`
-    font-size: ${({ theme }) => theme.fontSizes.md};
-  `}
-
-  ${media.desktop`
-    font-size: ${({ theme }) => theme.fontSizes.lg};
-  `}
-
-  ${media.widescreen`
-    font-size: ${({ theme }) => theme.fontSizes.lg};
-  `}
-
   ${media.fullHD`
     font-size: ${({ theme }) => theme.fontSizes.xl};
   `}
 `;
 
 const AppLinkComponent = ({ children, ...props }: AppLinkProps) => {
-  console.log('Label', children);
   return <StyledNavLink {...props}>{children}</StyledNavLink>;
 };
 

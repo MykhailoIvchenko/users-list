@@ -19,6 +19,8 @@ export const theme = {
 
   spacing: (factor: number) => `${0.25 * factor}rem`,
 
+  offset: (factor: number) => `${factor * 20}px`,
+
   borderRadius: '8px',
 
   fonts: {

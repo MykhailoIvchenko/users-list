@@ -8,44 +8,47 @@ interface BurgerButtonProps {
 }
 
 const Button = styled.button`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 5px;
+  position: relative;
   width: 40px;
   height: 40px;
-  padding: 0;
   background: none;
   border: none;
+  padding: 0;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  &:focus {
+  &:focus-visible {
     outline: 2px solid ${({ theme }) => theme.colors.primary};
-    outline-offset: 2px;
+    outline-offset: 3px;
   }
 `;
 
-const Bar = styled.span<{ $isOpen: boolean }>`
-  display: block;
+const Bar = styled.span<{ $isOpen: boolean; $index: number }>`
+  position: absolute;
   width: 24px;
   height: 2px;
   background-color: ${({ theme }) => theme.colors.text};
   border-radius: 1px;
   transition: transform 0.3s ease, opacity 0.3s ease;
 
-  &:nth-child(1) {
-    transform: ${({ $isOpen }) =>
-      $isOpen ? 'rotate(45deg) translateY(7px)' : 'none'};
-  }
-
-  &:nth-child(2) {
-    opacity: ${({ $isOpen }) => ($isOpen ? 0 : 1)};
-  }
-
-  &:nth-child(3) {
-    transform: ${({ $isOpen }) =>
-      $isOpen ? 'rotate(-45deg) translateY(-7px)' : 'none'};
-  }
+  ${({ $isOpen, $index }) => {
+    switch ($index) {
+      case 0:
+        return $isOpen
+          ? `transform: rotate(45deg);`
+          : `transform: translateY(-8px);`;
+      case 1:
+        return $isOpen
+          ? `opacity: 0; transform: translateY(0);`
+          : `transform: translateY(0);`;
+      case 2:
+        return $isOpen
+          ? `transform: rotate(-45deg);`
+          : `transform: translateY(8px);`;
+    }
+  }}
 `;
 
 export const BurgerButton = memo(
@@ -57,9 +60,9 @@ export const BurgerButton = memo(
         aria-expanded={isOpen}
         className={className}
       >
-        <Bar $isOpen={isOpen} />
-        <Bar $isOpen={isOpen} />
-        <Bar $isOpen={isOpen} />
+        <Bar $isOpen={isOpen} $index={0} />
+        <Bar $isOpen={isOpen} $index={1} />
+        <Bar $isOpen={isOpen} $index={2} />
       </Button>
     );
   }
