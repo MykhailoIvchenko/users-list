@@ -9,21 +9,31 @@ interface PageTitleProps {
 
 const StyledPageTitle = styled.h1`
   font-family: ${({ theme }) => theme.fonts.body};
-  font-size: ${({ theme }) => theme.fontSizes.xl};
   font-weight: 700;
   color: ${({ theme }) => theme.colors.text};
   margin: ${({ theme }) => theme.spacing(4)} 0
     ${({ theme }) => theme.spacing(3)};
   line-height: 1.2;
 
+  font-size: ${({ theme }) => theme.fontSizes.lg};
+
   ${media.mobile`
     font-size: ${({ theme }) => theme.fontSizes.lg};
-    margin: ${({ theme }) => theme.spacing(3)} 0 ${({ theme }) =>
-    theme.spacing(2)};
   `}
-
-  ${media.fullHD`
+  ${media.tablet`
+    font-size: ${({ theme }) => theme.fontSizes.xl};
+  `}
+  ${media.laptop`
+    font-size: 2.25rem;
+  `}
+  ${media.desktop`
     font-size: 2.5rem;
+  `}
+  ${media.widescreen`
+    font-size: 2.75rem;
+  `}
+  ${media.fullHD`
+    font-size: 3rem;
   `}
 `;
 
