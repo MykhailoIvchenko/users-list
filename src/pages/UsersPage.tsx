@@ -17,6 +17,10 @@ const HeaderRow = styled.div`
   justify-content: space-between;
   gap: ${({ theme }) => theme.spacing(4)};
   margin-bottom: ${({ theme }) => theme.spacing(3)};
+  position: sticky;
+  top: ${({ theme }) => theme.sizes.headerHeight};
+  background-color: ${({ theme }) => theme.colors.background};
+  border-radius: ${({ theme }) => theme.borderRadius};
 
   ${media.laptop`
     flex-direction: row;
