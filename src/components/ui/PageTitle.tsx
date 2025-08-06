@@ -14,6 +14,7 @@ const StyledPageTitle = styled.h1`
   margin: ${({ theme }) => theme.spacing(4)} 0
     ${({ theme }) => theme.spacing(3)};
   line-height: 1.2;
+  text-align: center;
 
   font-size: ${({ theme }) => theme.fontSizes.lg};
 

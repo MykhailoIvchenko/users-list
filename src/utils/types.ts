@@ -81,6 +81,13 @@ export interface IUserFromApi extends IUser {
   role: string;
 }
 
+export interface IUsersResponse {
+  users: IUserFromApi[];
+  total: number;
+  skip: number;
+  limit: 30;
+}
+
 export interface INavRoute {
   label: string;
   to: string;

@@ -12,14 +12,20 @@ interface NavbarProps {
 const Wrapper = styled.nav`
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: ${({ theme }) => theme.spacing(4)};
 
   ${media.mobile`
     display: none;
   `}
+
+  ${media.tablet`
+    display: flex;
+  `}
 `;
 
 export const Navbar = memo(({ routes, className }: NavbarProps) => {
+  console.log('Routes are', routes);
   return (
     <Wrapper
       className={className}

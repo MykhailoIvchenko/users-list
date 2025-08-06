@@ -6,6 +6,7 @@ import { AppRoutes } from '../../utils/enums';
 import { BurgerButton } from '../BurgetButton';
 import { Navbar } from '../Navbar';
 import { INavRoute } from '../../utils/types';
+import LogoIcon from '../../assets/icons/vite.svg?react';
 
 interface HeaderProps {
   isMobileMenuOpen: boolean;
@@ -19,8 +20,10 @@ const HeaderWrapper = styled.header`
   align-items: center;
   padding: ${({ theme }) => theme.spacing(2)} ${({ theme }) => theme.spacing(4)};
   background-color: ${({ theme }) => theme.colors.surface};
-  position: relative;
-  z-index: 10;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 `;
 
 const Logo = styled(Link)`
@@ -50,7 +53,9 @@ export const Header = memo(
   ({ isMobileMenuOpen, onToggleMobileMenu, routes }: HeaderProps) => {
     return (
       <HeaderWrapper>
-        <Logo to={AppRoutes.HOME}>MyApp</Logo>
+        <Logo to={AppRoutes.HOME}>
+          <LogoIcon />
+        </Logo>
 
         <BurgerWrapper>
           <BurgerButton

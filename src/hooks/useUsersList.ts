@@ -6,7 +6,7 @@ import { ApiEndpoints, ApiMethods, SearchParamsKeys } from '../utils/enums';
 import {
   AsyncVoidFunctionWithoutArgs,
   IUser,
-  IUserFromApi,
+  IUsersResponse,
 } from '../utils/types';
 import { useFetchData } from './useFetchData';
 
@@ -27,10 +27,12 @@ export const useUsersList = () => {
       method: ApiMethods.GET,
     };
 
-    const usersFromApi = await apiService.apiRequest<IUserFromApi[]>(
+    const usersResponse = await apiService.apiRequest<IUsersResponse>(
       apiUrl,
       options
     );
+
+    const usersFromApi = usersResponse?.users;
 
     const usersDtos = dtoService.getUsersDtos(usersFromApi);
 

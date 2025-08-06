@@ -15,7 +15,7 @@ const activeStyle = css`
 `;
 
 const inactiveStyle = css`
-  color: ${({ theme }) => theme.colors.text};
+  color: ${({ theme }) => theme.colors.primary};
   text-decoration: none;
 
   &:hover,
@@ -62,6 +62,7 @@ const StyledNavLink = styled(NavLink)`
 `;
 
 const AppLinkComponent = ({ children, ...props }: AppLinkProps) => {
+  console.log('Label', children);
   return <StyledNavLink {...props}>{children}</StyledNavLink>;
 };
 
