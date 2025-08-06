@@ -6,19 +6,20 @@ import XIcon from '../../assets/icons/x.svg?react';
 
 const FooterWrapper = styled.footer`
   padding: ${({ theme }) => theme.spacing(4)} 0;
-  background-color: ${({ theme }) => theme.colors.surface};
+  background-color: ${({ theme }) => theme.colors.secondary};
   text-align: center;
 `;
 
 const Icons = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: ${({ theme }) => theme.spacing(3)};
   margin-bottom: ${({ theme }) => theme.spacing(2)};
 `;
 
 const IconLink = styled.a`
-  color: ${({ theme }) => theme.colors.secondary};
+  color: ${({ theme }) => theme.colors.surface};
   font-size: 1.5rem;
   transition: color 0.2s;
 
@@ -29,7 +30,7 @@ const IconLink = styled.a`
 
 const Copyright = styled.div`
   font-size: ${({ theme }) => theme.fontSizes.sm};
-  color: ${({ theme }) => theme.colors.secondary};
+  color: ${({ theme }) => theme.colors.surface};
 `;
 
 export const Footer = memo(() => {
@@ -41,21 +42,21 @@ export const Footer = memo(() => {
           target='_blank'
           rel='noopener noreferrer'
         >
-          <FacebookIcon />
-        </IconLink>
-        <IconLink
-          href='https://youtube.com'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          <YoutubeIcon />
+          <FacebookIcon width={24} height={24} />
         </IconLink>
         <IconLink
           href='https://x.com/'
           target='_blank'
           rel='noopener noreferrer'
         >
-          <XIcon />
+          <XIcon width={36} height={36} />
+        </IconLink>
+        <IconLink
+          href='https://youtube.com'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <YoutubeIcon width={36} height={36} />
         </IconLink>
       </Icons>
       <Copyright>

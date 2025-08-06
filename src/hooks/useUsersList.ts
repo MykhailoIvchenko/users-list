@@ -41,7 +41,8 @@ export const useUsersList = () => {
 
   const getFilteredUsers = (users: IUser[], searchQuery: string | null) => {
     if (!searchQuery) {
-      return users;
+      setUsersToDisplay(users);
+      return;
     }
 
     const loweredQuery = searchQuery.toLowerCase();
