@@ -31,6 +31,7 @@ export const MainContent = styled.main<MainContentProps>`
   `}
 
   ${media.fullHD`
+    width: 1500px;
     max-width: 1500px;
     margin-left: auto;
     margin-right: auto;

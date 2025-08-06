@@ -8,13 +8,19 @@ import { Notification } from '../components/ui/Notification';
 import { CenteredWrapper } from '../components/layout/СenteredWrapper';
 import { SearchInput } from '../components/SearchInput';
 import { ErrorText } from '../components/ui/ErrorText';
+import { media } from '../styles/media';
 
 const HeaderRow = styled.div`
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: space-between;
   gap: ${({ theme }) => theme.spacing(4)};
   margin-bottom: ${({ theme }) => theme.spacing(3)};
+
+  ${media.laptop`
+    flex-direction: row;
+  `}
 `;
 
 const UsersPage = () => {
