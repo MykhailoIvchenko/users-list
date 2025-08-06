@@ -11,8 +11,8 @@ const spin = keyframes`
 `;
 
 interface SpinnerProps {
-  size?: number; // розмір у пікселях, за замовчуванням 40
-  color?: string; // колір, за замовчуванням з теми primary
+  size?: number;
+  color?: string;
   className?: string;
 }
 
