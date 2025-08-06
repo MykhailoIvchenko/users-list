@@ -4,6 +4,7 @@ import { Image } from './ui/Image';
 import { IUser } from '../utils/types';
 import { media } from '../styles/media';
 import { InfoRow } from './ui/InfoRow';
+import { Button } from './ui/Button';
 
 interface UserDetailsProps {
   user: IUser;
