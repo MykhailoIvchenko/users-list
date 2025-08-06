@@ -1,6 +1,7 @@
 import { css, DefaultTheme, Interpolation } from 'styled-components';
+import { theme } from './theme';
 
-type BreakpointKeys = keyof DefaultTheme['breakpoints'];
+type BreakpointKeys = keyof typeof theme.breakpoints;
 
 type Media = {
   [K in BreakpointKeys]: (
@@ -10,10 +11,10 @@ type Media = {
 };
 
 export const media = (
-  Object.keys({} as DefaultTheme['breakpoints']) as BreakpointKeys[]
+  Object.keys(theme.breakpoints) as BreakpointKeys[]
 ).reduce((acc, key) => {
   acc[key] = (first, ...interpolations) => css<DefaultTheme>`
-    @media (min-width: ${({ theme }) => theme.breakpoints[key]}) {
+    @media (min-width: ${theme.breakpoints[key]}) {
       ${css<DefaultTheme>(first, ...interpolations)}
     }
   `;
