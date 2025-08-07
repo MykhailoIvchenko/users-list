@@ -107,7 +107,7 @@ This command builds the project (`predeploy`), then publishes the contents of th
 
 ```
 .
-├── public/              # Static files like
+├── public/              # Static files
 │   └── vite.svg
 ├── src/                 # Source code folder
 │   ├── assets/          # Images and icons
@@ -120,11 +120,10 @@ This command builds the project (`predeploy`), then publishes the contents of th
 │   ├── pages/           # Application pages for routing
 │   ├── routes/          # Route definitions
 │   ├── services/        # API and data services
-│   ├── styles/          # Global styles, themes, and typings
+│   ├── styles/          # Global styles, themes
 │   └── utils/           # Utility functions, constants, and types
 ├── App.tsx              # Root React component
 ├── main.tsx             # Entry point
-├── vite-env.d.ts        # Vite environment typings
 ├── package.json         # Project metadata and scripts
 ├── tsconfig.json        # TypeScript configuration
 └── vite.config.ts       # Vite build configuration
