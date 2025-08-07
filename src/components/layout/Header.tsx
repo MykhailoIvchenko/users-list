@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { media } from '../../styles/media';
 import { AppRoutes } from '../../utils/enums';
-import { BurgerButton } from '../BurgetButton';
+import { BurgerButton } from '../BurgerButton';
 import { Navbar } from '../Navbar';
 import { INavRoute } from '../../utils/types';
 import LogoIcon from '../../assets/icons/vite.svg?react';

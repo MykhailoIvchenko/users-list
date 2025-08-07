@@ -47,7 +47,6 @@ export const NavbarMobile = memo(
   ({ isOpen, routes, onClose, className }: NavbarMobileProps) => {
     const [shouldRender, setShouldRender] = useState(isOpen);
 
-    // Scroll lock
     useEffect(() => {
       if (isOpen) {
         document.body.style.overflow = 'hidden';
