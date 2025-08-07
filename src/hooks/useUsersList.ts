@@ -50,7 +50,7 @@ export const useUsersList = () => {
     const filteredUsers = users.filter(
       (user) =>
         user?.firstName?.toLowerCase().includes(loweredQuery) ||
-        user?.lastName?.includes(loweredQuery)
+        user?.lastName?.toLowerCase()?.includes(loweredQuery)
     );
 
     setUsersToDisplay(filteredUsers);
